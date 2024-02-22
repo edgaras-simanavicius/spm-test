@@ -12,14 +12,14 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "OndatoSDK",
-            targets: ["OndatoSDK"]),
+            targets: ["OndatoSDK", "FaceTecSDK", "OpenSSL"]),
     ],
     targets: [
         .binaryTarget(name: "OndatoSDK",
-                      path: "./Sources/OndatoSDK.xcframework"),
+                      path: "./OndatoSDK.xcframework"),
         .binaryTarget(name: "FaceTecSDK",
-                      path: "./Sources/FaceTecSDK.xcframework"),
+                      path: "./FaceTecSDK.xcframework"),
         .binaryTarget(name: "OpenSSL",
-                      path: "./Sources/OpenSSL.xcframework")
+                      path: "./OpenSSL.xcframework")
     ]
 )
